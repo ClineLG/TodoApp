@@ -14,7 +14,7 @@ function App() {
   const [submitSearch, setSubmitSearch] = useState(false);
   const [darkmode, setDarkmode] = useState(false);
   return (
-    <>
+    <div className={`principale ${darkmode && "dark"}`}>
       <Header setDarkmode={setDarkmode} darkmode={darkmode} />
 
       <main className={`${darkmode && "dark"}`}>
@@ -50,7 +50,7 @@ function App() {
         />
       </main>
       <Footer darkmode={darkmode} />
-    </>
+    </div>
   );
 }
 
